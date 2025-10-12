@@ -11,7 +11,7 @@ body {
 /* --- HEADERS & TEXT --- */
 header, section {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 h1, h2 {
@@ -117,4 +117,5 @@ header {
   display: flex;                 /* makes logo + nav sit side by side */
   align-items: center;           /* vertically center them */
   justify-content: space-between;/* logo left, nav right */
+
 }
