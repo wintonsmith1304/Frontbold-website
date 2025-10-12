@@ -1,0 +1,48 @@
+/* --- GLOBAL STYLES --- */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background-color: #fafafa;
+}
+
+/* --- HEADERS & TEXT --- */
+header, section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+h1, h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+/* --- PROJECT STYLING --- */
+.project img {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
+.project h3 {
+  margin: 10px 0 5px;
+}
+
+/* --- FOOTER --- */
+footer {
+  background: #eee;
+  padding: 20px;
+  font-size: 14px;
+}
