@@ -43,27 +43,24 @@ a {
 
 /* --- FOOTER --- */
 footer {
-  background: #eee;
+  background: #703500;
   padding: 20px;
   font-size: 14px;
+  color: white;
 }
 
 /* --- HEADER & NAVIGATION --- */
 header {
-  text-align: left; /* override your global header center alignment */
-  background-color: #000; /* black background for top header */
+  text-align: left; 
+  background-color: #703500; 
   color: white;
   padding: 20px 40px;
 }
 
 .logo img {
-  height: 50px;
+  height: 90px;
 }
 
-.navbar {
-  background-color: #111; /* slightly lighter black for contrast */
-  padding: 10px 0;
-}
 
 .navbar ul {
   display: flex;
@@ -85,4 +82,39 @@ header {
 
 .navbar a:hover {
   color: #f2f2f2;
+}
+
+/* --- Call to Action ---*/
+#cta {
+  background-color: #38322d;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#cta p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline block;
+  background-color: #703500;
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3
+}
+
+.cta-button:hover {
+  background-color: #642f01;
+}
+
+.header-container {
+  display: flex;                 /* makes logo + nav sit side by side */
+  align-items: center;           /* vertically center them */
+  justify-content: space-between;/* logo left, nav right */
 }
