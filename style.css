@@ -5,6 +5,7 @@ body {
   padding: 0;
   color: #222;
   background-color: #fafafa;
+  font-size: 16px;
 }
 
 /* --- HEADERS & TEXT --- */
@@ -30,9 +31,7 @@ a {
 
 /* --- PROJECT STYLING --- */
 .project img {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
+  width: 300px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   margin-bottom: 10px;
@@ -49,5 +48,41 @@ footer {
   font-size: 14px;
 }
 
+/* --- HEADER & NAVIGATION --- */
+header {
+  text-align: left; /* override your global header center alignment */
+  background-color: #000; /* black background for top header */
+  color: white;
+  padding: 20px 40px;
+}
 
+.logo img {
+  height: 50px;
+}
 
+.navbar {
+  background-color: #111; /* slightly lighter black for contrast */
+  padding: 10px 0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #f2f2f2;
+}
