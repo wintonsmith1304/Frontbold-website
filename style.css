@@ -30,7 +30,7 @@ a {
 
 /* --- PROJECT STYLING --- */
 .project img {
-  width: 300px;
+  width: 800px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   margin-bottom: 10px;
@@ -46,3 +46,4 @@ footer {
   padding: 20px;
   font-size: 14px;
 }
+
