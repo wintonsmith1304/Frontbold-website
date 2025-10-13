@@ -11,8 +11,14 @@ body {
 /* --- HEADERS & TEXT --- */
 header, section {
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
+
+#portfolio {
+  text-align: left;
+  padding: 40px 0;
+}
+
 
 h1, h2 {
   font-weight: 600;
@@ -30,8 +36,10 @@ a {
 }
 
 /* --- PROJECT STYLING --- */
-.project img {
-  width: 300px;
+.project img,
+.project video {
+  width: 500px;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   margin-bottom: 10px;
@@ -77,7 +85,8 @@ header {
 .navbar a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 540;
+  font-size: 20px;
 }
 
 .navbar a:hover {
@@ -89,8 +98,14 @@ header {
   background-color: #38322d;
   color: white;
   text-align: center;
-  padding: 40px 20px;
+  display: flex;               /* enable flex layout */
+  flex-direction: column;      /* stack content vertically */
+  justify-content: center;     /* center content vertically */
+  align-items: center;         /* center content horizontally */
+  min-height: 80px;           /* ensures section is tall enough */
+  padding: 60px 20px;             /* only horizontal padding now */
 }
+
 
 #cta p {
   font-size: 18px;
@@ -98,7 +113,7 @@ header {
 }
 
 .cta-button {
-  display: inline block;
+  display: inline-block;
   background-color: #703500;
   color: white;
   padding: 15px 30px;
@@ -106,7 +121,7 @@ header {
   border-radius: 10px;
   text-decoration: none;
   font-weight: 500;
-  transition: background-color 0.3
+  transition: background-color 0.3s
 }
 
 .cta-button:hover {
@@ -117,5 +132,59 @@ header {
   display: flex;                 /* makes logo + nav sit side by side */
   align-items: center;           /* vertically center them */
   justify-content: space-between;/* logo left, nav right */
-
 }
+
+/* --- PORTFOLIO AUTO SCROLL --- */
+#portfolio {
+  text-align: center;
+  padding: 60px 0;
+  background-color: #fafafa;
+}
+
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 40px 20px;
+  scroll-behavior: smooth;
+  max-width: 90%;
+  margin: 0 auto;
+  scroll-snap-type: x mandatory; /* enables snap scrolling */
+}
+
+.project {
+  flex: 0 0 auto;
+  width: 400px;                   /* fixed width helps smooth scrolling */
+  text-align: center;
+}
+
+.project img,
+.project video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.portfolio-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.portfolio-container::-webkit-scrollbar-thumb {
+  background-color: #703500;  /* matches your brand brown */
+  border-radius: 10px;
+}
+
+.portfolio-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+
+.portfolio-container {
+  scrollbar-color: #703500 #e0e0e0; /* thumb + track */
+  scrollbar-width: thin;
+}
+
