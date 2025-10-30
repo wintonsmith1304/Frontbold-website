@@ -11,14 +11,18 @@
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="images/frontbold-logo.png" alt="Frontbold Studio Logo">
+        <a href="index.html" class="navbar-logo">
+          <img src="images/frontbold-logo.png" alt="Frontbold Studio Logo">
+        </a>
     </div>
+
  <nav class="navbar">
     <ul>
-      <li><a href="#home">+Home</a></li>
       <li><a href="portfolio.html">+Portfolio</a></li>
+       <li><a href="services.html">+Services</a></li>
       <li><a href="#about">+About</a></li>
       <li><a href="#contact">+Contact</a></li>
+
     </ul>
   </nav>
     <p>Human designs. Great designs.</p>
@@ -41,6 +45,13 @@
 
     
   </div>
+
+</section>
+<section id ="headline">
+    <div class="headline-container">
+        <h2>About Us</h2>
+        <p>At Frontbold Logo Studio, we specialize in creating distinctive logos that capture the essence of your brand. Our designs are not just visually appealing but also strategically crafted to leave a lasting impression.</p>
+    </div>
 </section>
 
  <section id ="cta">
@@ -80,11 +91,6 @@
     
   </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Hi there, we at Frontbold Logo Studio, have over 5 years of experience in creating compelling visual identities for businesses. </p>
- </section>   
-
  <section id="testimonials">
     <h2>What Our Clients Say</h2>
     <div class="testimonial">
@@ -98,21 +104,20 @@
     </div>
 
 
-  <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>Logo Design — $89.97</li>
-      <li>Brand Kit — $299.97</li>
-      <li>Website Design — from $897</li>
-      <li>Banner Design — from $99.97</li>
-    </ul>
-  </section>
-
   <section id="contact">
-    <h2>Let's Work Together</h2>
-    <p>Email: <a href="hello@frontboldlogostudio.com">hello@frontboldlogostudio.com</a></p>
 
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="contact-header">
+      <h2>Let's Work Together</h2>
+    </div>
+
+    <div class="contact-info-row">
+      <div class="contact-info-email">
+        <h2>Email</h2> 
+        <a href="hello@frontboldlogostudio.com">hello@frontboldlogostudio.com</a>
+
+      </div>
+
+       <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
@@ -131,6 +136,8 @@
     <button type="submit" class="cta-button">Send Message</button>
   </form>
 
+    </div>
+
   </section>
 
   <footer>
@@ -141,5 +148,44 @@
   <script>
   console.log("✅ JS file loaded");
 </script>
+
+<!-- scripts -->
+  <script>
+    // small helpers: current year, smooth scroll, simple form feedback
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // smooth internal link scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // update focus for accessibility
+          target.setAttribute('tabindex', '-1');
+          target.focus({ preventScroll: true });
+        }
+      });
+    });
+
+    // basic Formspree success message (optional)
+    const form = document.querySelector('.contact-form');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        // allow default submit to Formspree; you could add AJAX here
+        // show a quick confirmation so user knows it was submitted
+        setTimeout(() => {
+          alert('Thank you — your message was sent. We will reply within 2 business days.');
+        }, 500);
+      });
+    }
+
+    // console log to confirm scripts load
+    console.log('Frontbold site scripts loaded');
+  </script>
+
+  <!-- external script file (optional) -->
+  <script src="script.js" defer></script>
+
 </body>
 </html>

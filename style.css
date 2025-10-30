@@ -135,9 +135,11 @@ a {
 
 /* --- FOOTER --- */
 footer {
+  text-align: left;
   background: #703500;
-  padding: 20px;
-  font-size: 14px;
+  padding: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
   color: white;
 }
 
@@ -202,6 +204,24 @@ header p {
   color: #f2f2f2;
 }
 
+#headline {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  display: flex;               /* enable flex layout */
+  flex-direction: column;      /* stack content vertically */
+  justify-content: center;     /* center content vertically */
+  align-items: center;         /* center content horizontally */
+  min-height: 300px;           /* ensures section is tall enough */
+  padding: 60px 20px;    
+}
+
+.headline-container h2 {
+  font-family: 'Montserrat';
+  src: url('font/Montserrat-Bold.ttf'); format('truetype');
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
 /* --- Call to Action ---*/
 #cta {
   background-color: #211811;
@@ -341,11 +361,47 @@ header p {
 }
 
 /* --- CONTACT FORM STYLES --- */
+.contact-header {
+  font-size: 1.5rem;
+  padding: 20px;
+}
+.contact-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 40px;
+  gap : 30%;
+}
+
+.contact-info-email {
+   display: flex;               /* enable flex layout */
+  flex-direction: column;      /* stack content vertically */
+  justify-content: center;     /* center content vertically */
+  align-items: center;   
+}
+
+
+
+.contact-info-email h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.contact-info-email a {
+  font-size: 1.2rem;
+  color: #703500;
+  text-decoration: none;
+}
+
 .contact-form {
-  max-width: 600px;
-  margin: 40px auto;
+  flex:1;
+  max-width: 700px;
+  margin: 0 ;
   background: #fff;
-  padding: 30px;
+  padding: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
@@ -392,3 +448,4 @@ button.cta-button {
 button.cta-button:hover {
   background-color: #5e2c00;
 }
+
